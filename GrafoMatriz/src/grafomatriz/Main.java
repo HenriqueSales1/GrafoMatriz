@@ -5,17 +5,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void menu() {
-        System.out.println("-----------------------------------");
-        System.out.println("| 1. Criar grafo vazio            |");
-        System.out.println("| 2. Inserir aresta               |");
-        System.out.println("| 3. Remover aresta               |");
-        System.out.println("| 4. Verificar adjacencia         |");
-        System.out.println("| 5. Verificar primeiro adjacente |");
-        System.out.println("| 6. Verificar próximo adjacente  |");
-        System.out.println("| 7. Lista de adjacencias         |");
-        System.out.println("| 8. Imprimir grafo               |");
-        System.out.println("| 9. Sair                         |");
-        System.out.println("-----------------------------------");
+        System.out.println("---------------------------------------------");
+        System.out.println("| 1. Criar grafo vazio                      |");
+        System.out.println("| 2. Inserir aresta                         |");
+        System.out.println("| 3. Remover aresta                         |");
+        System.out.println("| 4. Verificar adjacencia                   |");
+        System.out.println("| 5. Verificar primeiro adjacente           |");
+        System.out.println("| 6. Verificar próximo adjacente            |");
+        System.out.println("| 7. Lista de adjacencias                   |");
+        System.out.println("| 8. Imprimir grafo                         |");
+        System.out.println("| 9. Importar e imprimir grafo predefinido  |");
+        System.out.println("| 0. Sair                                   |");
+        System.out.println("---------------------------------------------");
     }
 
     public static void main(String[] args) {
@@ -74,6 +75,12 @@ public class Main {
                 case 8:
                     g.matPrint();
                     break;
+                case 9:
+                    g.importaArq();
+                    g.matPrint();
+                    break;
+            }
+        } while (opcao != 0);
             }
         } while (opcao != 9);
         g.exportaArq();
