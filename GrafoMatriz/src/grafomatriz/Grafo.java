@@ -12,7 +12,7 @@ public class Grafo {
     public void importaArq() {
         try {
             String direc;
-            Scanner s = new Scanner(new File("src/trabalhoaed3/grafo.txt"));
+            Scanner s = new Scanner(new File("src/grafomatriz/grafo.txt"));
             direc = s.nextLine();
             this.direcionado = !direc.equals("nao");
             vertices = s.nextInt();
@@ -112,14 +112,14 @@ public class Grafo {
 
     public void exportaArq() {
         try {
-            File arquivo = new File("src/trabalhoaed3/grafo_novo.txt");
+            File arquivo = new File("src/grafomatriz/grafo_novo.txt");
             arquivo.createNewFile();
         } catch (IOException e) {
             System.out.println("Erro");
         }
 
         try {
-            FileWriter arquivo = new FileWriter("src/trabalhoaed3/grafo_novo.txt");
+            FileWriter arquivo = new FileWriter("src/grafomatriz/grafo_novo.txt");
             if (direcionado) {
                 arquivo.write("sim");
             } else {
